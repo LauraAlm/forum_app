@@ -1,0 +1,607 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('./components/ForumPage1.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* ------------- Nav ---------- */
+
+.toolbar-logo {
+  height: 150px;
+}
+
+.nav-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0.7;
+}
+
+/* -------------Login and registration forms---------- */
+
+.login-form,
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.login-form h2,
+.registration-form h2 {
+  margin-bottom: 1rem;
+}
+
+.login-form div label {
+  font-size: 0.9rem;
+}
+
+.login-form div input {
+  accent-color: #7b90aa;
+}
+
+.login-form input,
+.registration-form input {
+  padding: 0.625rem;
+  border: solid 1px #7b90aa;
+}
+
+.login-form input:focus,
+.registration-form input:focus {
+  border: 3px solid #7b90aa;
+  outline: 0;
+}
+
+.primary-btn,
+.confirm-btn,
+.cancel-btn {
+  width: 8rem;
+  padding: 0.5rem 0rem 0.4rem 0rem;
+  background: #9494b8;
+  border: 2px solid #9494b8;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.primary-btn:hover,
+.confirm-btn:hover,
+.cancel-btn:hover {
+  background-color: #52527a;
+  border-color: #52527a;
+  transition: 0.3s;
+}
+
+.small-link {
+  border: 0;
+  background-color: white;
+  color: #7b90aa;
+  cursor: pointer;
+}
+
+.small-link:hover {
+  color: #ff8888;
+}
+
+.checkbox-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.error {
+  font-size: 0.9rem;
+  color: #53003a;
+}
+
+/* -------------Login and registration pages---------- */
+
+.login-page,
+.register-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.login-register-btns-container,
+.registration-form button,
+.registration-form input,
+.login-form input,
+.login-form button,
+.login-form p {
+  z-index: 1;
+}
+
+.login-register-btns-container {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.login-form p {
+  background: none;
+  font-size: 0.9rem;
+}
+
+/* -------------Auth page---------- */
+.auth-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100vh;
+  position: relative;
+}
+
+.auth-page h2 {
+  text-align: center;
+  margin: 1.25rem 6.25rem 0rem 6.25rem;
+  margin-bottom: 50px;
+}
+
+.welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome h2 {
+  margin-top: 3rem;
+}
+/* -------------Index page / Forum ---------- */
+
+.forum-page {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.forum-cat-list {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #7b90aa;
+  padding: 0.3rem;
+  margin: 12rem 0.7rem 0rem 0.7rem;
+}
+
+.forum-cat-list a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.forum-cat-list a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.forum-cat-list h2 {
+  padding: 0.2rem;
+}
+
+.forum-cat-list h5 {
+  padding: 0.2rem;
+  margin-right: 1rem;
+}
+
+.category-link {
+  border-bottom: 1px solid #000;
+  margin: 1.5rem;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+.subcategory-link {
+  border-bottom: 1px solid #000;
+  margin: 1.5rem;
+
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.active-btn span {
+  background-color: #52527a !important;
+  border-color: #52527a !important;
+  transition: 0.3s !important;
+}
+
+.forum-pagination-button {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.forum-create-button {
+  margin-top: -0.5rem;
+  margin-right: 1rem;
+}
+
+/* ------------- Subcategory Page ---------- */
+
+.forum-cat-list-subcat {
+  display: flex;
+  flex-direction: column;
+  padding: 0.3rem;
+  margin: 1rem 1rem 1rem 1rem;
+}
+
+.subcat-title-description {
+  background-color: rgb(254, 255, 255, 0.9);
+  padding: 0.1rem 0.7rem;
+  font-size: 1.3rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease;
+}
+.subcat-title-description:hover {
+  background-color: rgb(254, 255, 255, 1);
+}
+
+.subcat-owner {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.5rem;
+}
+
+.subcat-owner-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.profile-img-circular {
+  height: 35px;
+  width: 35px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-right: 0.3rem;
+}
+
+.profile-img-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-section {
+  margin-top: 2rem;
+  max-height: 500px;
+}
+
+.subcat-comment-owner {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: 0.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.subcat-comment-description {
+  background-color: rgba(133, 133, 133, 0.2);
+  padding: 0.1rem 0.7rem;
+  margin: 0.8rem 0.3rem;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  max-height: 500pxrem;
+}
+.subcat-comment-description:hover {
+  background-color: rgba(133, 133, 133, 0.4);
+}
+
+.comment-img {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
+.comment-section-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 0.5rem;
+}
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-left: -0.5rem;
+}
+
+.comment-input-text {
+  min-width: 480px;
+  min-height: 70px;
+  margin-bottom: 0.5rem;
+  padding: 10px;
+}
+
+.comment-input-url {
+  min-width: 480px;
+  padding: 5px 10px;
+  margin-bottom: 0.5rem;
+}
+
+.subcat-url {
+  margin-left: 0.3rem;
+}
+
+/* ------------- Profile Page ---------- */
+
+.profile-section-main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem 2rem 3rem 2rem;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 15px;
+  max-width: 100%;
+}
+
+.profile-section-main h1 {
+  margin: 10px 0px;
+}
+.profile-section {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin: 1rem 2rem 0rem 2rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255, 0.5);
+  border-radius: 15px;
+  max-height: 300px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+  min-height: 15rem;
+}
+
+.profile-section-circular {
+  height: 200px;
+  width: 200px;
+  overflow: hidden;
+  border-radius: 50px;
+  margin-right: 0.3rem;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+
+.profile-section-circular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-img {
+  height: 200px;
+}
+
+.profile-img-update {
+  padding: 3px 60px;
+  margin: 5px;
+}
+
+/* ------------- Chat Page ---------- */
+
+.chat-container {
+  margin: 3rem 0.3rem;
+  display: flex;
+  flex-direction: row;
+  height: 800px;
+}
+
+.chat-message-owner {
+  width: 30%;
+  margin: 1rem;
+  border: 1px solid rgb(173, 172, 172);
+}
+
+.chat-message-owner h1 {
+  padding: 1rem;
+}
+.chat-message-container {
+  width: 70%;
+  margin: 1rem;
+  border: 1px solid rgb(173, 172, 172);
+}
+
+.chat-message-container h1 {
+  padding: 1rem;
+}
+.chat-message-section {
+  margin: 2rem;
+  padding: 20px;
+  background-color: rgb(130, 140, 89, 0.3);
+}
+.inbox-messenger {
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.active {
+  background-color: rgb(255, 220, 114, 0.4);
+  color: rgb(95, 95, 95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.message-input-text {
+  margin-top: 0.5rem;
+
+  height: 100px;
+  width: 450px;
+}
+
+.message-input-button-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+}
+/*NEISTRINTI*/
+*/
+/* ------------- Modal ---------- */
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin-top: -5rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-overlay h2 {
+  color: rgb(58, 58, 58);
+}
+
+.modal-content {
+  background: white;
+  padding: 1.25rem 3rem;
+  margin: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.modal-buttons-div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.modal-activation {
+  text-align: center;
+}
+
+.modal-activation input {
+  margin-top: 1rem;
+  padding: 0.625rem;
+  border: solid 1px #7b90aa;
+}
+
+.modal-activation input:focus {
+  border: solid 3px #7b90aa;
+  outline: none;
+}
+
+/* ------------- Tablet and bigger screens ---------- */
+
+@media screen and (min-width: 620px) {
+}
+
+@media screen and (min-width: 768px) {
+  .forum-cat-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #7b90aa;
+    padding: 3rem 3rem;
+    margin: 12rem 3rem 0rem 3rem;
+  }
+
+  .profile-container {
+    margin: 1rem 5rem;
+  }
+
+  .profile-section {
+    max-height: 260px;
+
+    max-width: px;
+  }
+  .comment-input-text {
+    min-width: 560px;
+    min-height: 100px;
+    margin-bottom: 0.5rem;
+    padding: 15px;
+  }
+
+  .forum-cat-list-subcat {
+    margin: 1rem 5rem 1rem 5rem;
+  }
+
+  .chat-container {
+    margin: 1rem 7rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .nav-greeting-logout {
+    margin-right: 100px;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    min-height: 900px;
+    margin-top: 3rem;
+  }
+
+  .profile-section {
+    height: 850px;
+    margin-left: -10px;
+    width: 750px;
+    margin-bottom: 2.5rem;
+  }
+
+  .profile-section-main div {
+    margin: 2rem;
+  }
+
+  .forum-cat-list {
+    margin: 12rem 15rem 0rem 15rem;
+  }
+  .comment-input-text {
+    min-width: 760px;
+    min-height: 100px;
+    margin-bottom: 0.5rem;
+    padding: 15px;
+  }
+
+  .forum-cat-list-subcat {
+    margin: 1rem 20rem 1rem 20rem;
+  }
+  .message-input-text {
+    margin-top: 0.5rem;
+
+    height: 100px;
+    width: 750px;
+    margin-right: 1rem;
+  }
+}
