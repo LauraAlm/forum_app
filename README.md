@@ -14,3 +14,5 @@ Technologies used:
 - Password hashing for heightened security measures.
 - MongoDB as the database to store and manage application data.
 - Dotenv for managing environment variables and configurations.
+
+Visual representation: https://youtu.be/cX2MbTv5e34 .
